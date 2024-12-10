@@ -1,0 +1,8 @@
+{
+  "jobs":[
+    {"title":"job manager","id":"1","detail":"creative coder job manager"},
+    {"title":"job developer","id":"2","detail":"creative coder job developer"},
+    {"title":"job designer","id":"3","detail":"creative coder job designer"},
+    {"title":"job producer","id":"4","detail":"creative coder job producer"}
+  ]
+}

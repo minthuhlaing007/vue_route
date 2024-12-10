@@ -11,29 +11,20 @@
 export default {
   data() {
     return {
-      jobs: [
-        {
-          id: 1,
-          title: "manager",
-          detail: "male",
-        },
-        {
-          id: 2,
-          title: "supervisor",
-          detail: "creative coder supervisor",
-        },
-        {
-          id: 3,
-          title: "project manager",
-          detail: "dataland project manager",
-        },
-        {
-          id: 4,
-          title: "ceo",
-          detail: "my wife",
-        },
-      ],
+      jobs:[]
     };
+  },
+  mounted() {
+    fetch("http://localhost:3000/jobs")
+    .then((response)=>{
+      return response.json()
+    })
+    .then((datas)=>{
+      this.jobs = datas;
+    })
+    .catch((error)=>{
+      console.log(error.message());
+    })
   },
 };
 </script>
